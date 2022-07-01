@@ -11,7 +11,7 @@ program
     .alias("l")
     .description('Show help')
     .action(function(){
-        frameworkChoice();
+        Inquirer.frameworkChoice();
     })
 
 program
