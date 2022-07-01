@@ -1,0 +1,24 @@
+import {program} from 'commander';
+import Inquirer from './Inquirer.js';
+
+program
+    .version("0.0.1")
+    .description("CLI for GLI")
+
+
+program
+    .command('list')
+    .alias("l")
+    .description('Show help')
+    .action(function(){
+        frameworkChoice();
+    })
+
+program
+    .command('help')
+    .alias("h")
+    .description("Show help")
+    .action(function(){
+        helpChoice();
+    })
+program.parse(process.argv);
