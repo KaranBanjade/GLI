@@ -1,5 +1,7 @@
 import * as inquirer from 'inquirer'
-
+// this code will convert to var inquirer = require('inquirer')
+// the compiler will give an error
+//convert that loc to import('inquirer')
 class InquirerClass {
     constructor(){
         console.log("Inquirer Class Object Created");
