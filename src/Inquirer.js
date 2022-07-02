@@ -1,33 +1,35 @@
-// const inquire = require('inquirer');
-import inquirer from 'inquirer';
-class InquirerClass {
-    constructor(){
+"use strict";
+exports.__esModule = true;
+import ('inquirer')
+var InquirerClass = /** @class */ (function () {
+    function InquirerClass() {
         console.log("Inquirer Class Object Created");
     }
-    frameworkChoice(){
+    InquirerClass.prototype.frameworkChoice = function () {
         inquirer
-        .prompt({
-            name:"framework",
+            .prompt({
+            name: "framework",
             type: "list",
             message: "Choose Framework",
             choices: ["React", "Express", "Angular"]
         })
-        .then(answers => {
+            .then(function (answers) {
             console.log(answers);
-        })
-    }
-    helpChoice(){
+        });
+    };
+    InquirerClass.prototype.helpChoice = function () {
         inquirer
-        .prompt({
-            name:"help",
+            .prompt({
+            name: "help",
             type: "list",
             message: "Choose Help",
             choices: ["List", "Help"]
         })
-        .then(answers => {
+            .then(function (answers) {
             console.log(answers);
-        })
-    }   
-}
-const Inquirer  = new InquirerClass();
-export default Inquirer;
+        });
+    };
+    return InquirerClass;
+}());
+var Inquirer = new InquirerClass();
+exports["default"] = Inquirer;
