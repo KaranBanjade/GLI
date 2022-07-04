@@ -7,8 +7,11 @@ class Commander {
             const arr = ["program"]
             if (command.name)
                 arr.push(`.command('${command.name}')`);
-            if (command.argument)
-                arr.push(`.argument('${command.argument.join(',')}')`);
+            if (command.argument){
+                command.argument.map((arg)=>{
+                    arr.push(`.argument('${arg[0]}','${arg[1]}')`);
+                })
+            }
             if (command.option) {
                 command.option.map((opt)=>{
                     arr.push(`.option('${opt[0]}','${opt[1]}')`);
