@@ -26,6 +26,21 @@ const boilerplate = [
     }
     ,
     {
+    "id": "javascipt|angular",
+    "commands": [
+        "ng version",
+        "ng v"
+    ],
+    "preReq": [
+        "nodejs",
+        "ng"
+    ],
+    "details":"Command is used to check the version of angluar installed in your system",
+    "website": "https://angular.io/",
+    "docs": "https://angular.io/docs"
+    }
+    ,
+    {
         "id": "go",
         "commands": [
             "go version"
