@@ -1,7 +1,7 @@
-// const ListCommand = require("./list");
+const ListCommand = require("./list");
 const ReactCommand = require("./react");
 
 module.exports = [
-    // ListCommand,
+    ListCommand,
     ReactCommand
 ]
