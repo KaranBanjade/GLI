@@ -17,10 +17,10 @@ class Commander {
                     arr.push(`.option('${opt[0]}','${opt[1]}')`);
                 })
             }
-            if (command.action)
-                arr.push(`.action(${command.action})`)
             const code = arr.join('');
-            eval(code);
+            
+            eval(code)
+                .action(command.action);
         });
         program.parse(process.argv);
     }
