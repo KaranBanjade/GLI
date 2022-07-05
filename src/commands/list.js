@@ -5,19 +5,19 @@ const table = new Table({
     head: [...ObjectStruct],
     colWidths: [20, 20, 20, 60]
 });
+boilerplates.map((dat)=>{
+    table.push([
+        dat.id,
+        dat.commands,
+        dat.preReq,
+        dat.website
+    ])
+})
 
 module.exports = {
     name: "list",
     option: ["help","List all available commands"],
     action: function() {
-        boilerplates.map((dat)=>{
-            table.push([
-                dat.id,
-                dat.commands,
-                dat.preReq,
-                dat.details
-            ])
-        })
         console.log(table.toString());
     }
 }
