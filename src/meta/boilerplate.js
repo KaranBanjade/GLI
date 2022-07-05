@@ -35,7 +35,7 @@ module.exports = Object.freeze({
                 "ng v",
                 "ng new myNewApp" //to start a new angluar app
             ],
-            "preReq": [
+            "requirements": [
                 "nodejs",
                 "ng"
             ],
