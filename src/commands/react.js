@@ -6,3 +6,7 @@ module.exports = {
         console.log(Object.keys(options));
     }
 }
+
+/*
+DIDN'T REMOVE THIS FILE TO RETAIN CONTENT (REMOVE AS SOON AS THE CODE IS REUSED)
+*/
