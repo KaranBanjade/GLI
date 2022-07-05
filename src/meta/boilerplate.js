@@ -6,7 +6,7 @@ module.exports = Object.freeze({
                 "react -v",
                 "npm create-react-app my-app" //to create react app
             ],
-            "preReq": [
+            "requirements": [
                 "nodejs"
             ],
             "details": "Command is used to check the version of React installed in your system",
@@ -20,7 +20,7 @@ module.exports = Object.freeze({
                 "npm v vue",
                 "npm init vue@3" // to start a new vue app
             ],
-            "preReq": [
+            "requirements": [
                 "nodejs"
             ],
             "details": "Command is used to check the version of vue installed in your system",
@@ -50,7 +50,7 @@ module.exports = Object.freeze({
                 "go version",
                 "go mod init"
             ],
-            "preReq": [
+            "requirements": [
                 "go"
             ],
             "details": "Command is used to initialize a new go module",
@@ -63,7 +63,7 @@ module.exports = Object.freeze({
                 "cargo --version",
                 "cargo new"
             ],
-            "preReq": [
+            "requirements": [
                 "rust",
                 "cargo"
             ],
@@ -76,7 +76,7 @@ module.exports = Object.freeze({
             "commands": [
                 "git --version"
             ],
-            "preReq": [
+            "requirements": [
                 "git"
             ],
             "details": "Command is used to check the version of Git install in your system",
