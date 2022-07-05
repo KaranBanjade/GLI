@@ -3,7 +3,8 @@ module.exports = Object.freeze({
         {
             "id": "javascipt|react",
             "commands": [
-                "react -v"
+                "react -v",
+                "npm create-react-app my-app" //to create react app
             ],
             "preReq": [
                 "nodejs"
@@ -16,7 +17,8 @@ module.exports = Object.freeze({
         {
             "id": "javascipt|vue",
             "commands": [
-                "npm v vue"
+                "npm v vue",
+                "npm init vue@3" // to start a new vue app
             ],
             "preReq": [
                 "nodejs"
@@ -24,6 +26,22 @@ module.exports = Object.freeze({
             "details": "Command is used to check the version of vue installed in your system",
             "website": "https://vuejs.org",
             "docs": "https://vuejs.org/guide/introduction.html"
+        }
+        ,
+        {
+            "id": "javascipt|angular",
+            "commands": [
+                "ng version",
+                "ng v",
+                "ng new myNewApp" //to start a new angluar app
+            ],
+            "preReq": [
+                "nodejs",
+                "ng"
+            ],
+            "details": "Command is used to check the version of angluar installed in your system",
+            "website": "https://angular.io/",
+            "docs": "https://angular.io/docs"
         }
         ,
         {
