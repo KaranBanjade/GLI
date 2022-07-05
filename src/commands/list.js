@@ -22,7 +22,7 @@ module.exports = {
                 dat.id,
                 dat.commands,
                 dat.preReq,
-                dat.details
+                dat.website
             ])
         })
         console.log(table.toString());
