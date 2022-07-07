@@ -1,18 +1,25 @@
+const boilerplate = require("../meta/boilerplate").boilerplates;
 // Actutal execution logic for the desired entity chosen by the user
-module.exports = Object.freeze({
-    "javascript|react": function (meta) {
+module.exports = function(meta, id) {
+    let bp = boilerplate.find(bp => bp.id == id);
+}
 
-    },
-    "javascript|angular": function (meta) {
+// commented for now (will use if common logic doesn't work out)
 
-    },
-    "javascript|vue": function (meta) {
+// Object.freeze({
+//     "react": function (meta) {
 
-    },
-    "go": function (meta) {
+//     },
+//     "angular": function (meta) {
 
-    },
-    "rust": function (meta) {
+//     },
+//     "vue": function (meta) {
 
-    }
-});
+//     },
+//     "go": function (meta) {
+        
+//     },
+//     "rust": function (meta) {
+
+//     }
+// });
