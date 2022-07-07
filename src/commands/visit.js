@@ -1,6 +1,6 @@
 const boilerplates = require("../meta/boilerplate").boilerplates;
-const { exec } = require("child_process");
 const osCheck = require("../helpers/os-visit");
+const print = require("../utils/print");
 const output = null;
 const CLIDocsLink = "https://google.com";
 module.exports = {
@@ -14,20 +14,20 @@ module.exports = {
         else if (options.d === true) {
             const boilerplate = boilerplates.find(boilerplate => boilerplate.id === str);
             if (boilerplate) {
-                console.log("Opening " + boilerplate.id + " docs")
+                print(`Opening ${boilerplate.id} docs`,"green");
                 osCheck(boilerplate.docs);
             }
             else
-                console.log("No such framework");
+                print("No such framework","red");
         }
         else {
             const boilerplate = boilerplates.find(boilerplate => boilerplate.id === str);
             if (boilerplate) {
-                console.log("Opening " + boilerplate.id + " website")
+                print(`Opening ${boilerplate.id} website`,"green");
                 osCheck(boilerplate.website);
             }
             else
-                console.log("No such framework");
+                print("No such framework","red");
         }
     }
 }

@@ -1,5 +1,6 @@
 const Table = require("cli-table");
 const boilerplates = require("../meta/boilerplate").boilerplates;
+const print = require("../utils/print");
 const ObjectStruct = ['Id', 'Commands', 'Requirements', 'Website'];
 const table = new Table({
     head: [...ObjectStruct]
@@ -17,6 +18,6 @@ module.exports = {
     name: "list",
     option: ["help","List all available commands"],
     action: function() {
-        console.log(table.toString());
+        print(table.toString(),"blue");
     }
 }
