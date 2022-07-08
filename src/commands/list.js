@@ -5,7 +5,7 @@ const ObjectStruct = ['Id', 'Commands', 'Requirements', 'Website'];
 const table = new Table({
     head: [...ObjectStruct]
 });
-boilerplates.map((dat)=>{
+boilerplates.map((dat) => {
     table.push([
         dat.id,
         dat.commands.join(", "),
@@ -16,8 +16,8 @@ boilerplates.map((dat)=>{
 
 module.exports = {
     name: "list",
-    option: ["help","List all available commands"],
-    action: function() {
-        print(table.toString(),"blue");
+    option: ["help", "List all available commands"],
+    action: function () {
+        print(table.toString(), "blue");
     }
 }

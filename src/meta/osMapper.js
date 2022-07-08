@@ -3,16 +3,17 @@ module.exports = Object.freeze({
         {
             id: "Darwin",
             os: "MacOS",
-            commands: {LINK : "open"},
+            commands: { LINK: "open" },
         },
         {
             id: "Linux",
             os: "Linux",
-            commands: {LINK : "xdg-open"},
+            commands: { LINK: "xdg-open" },
         },
         {
             id: "Windows_NT",
             os: "Windows",
-            commands: {LINK : "explorer"},
+            commands: { LINK: "explorer" },
         }
-    ]})
+    ]
+});
