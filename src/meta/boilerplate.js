@@ -3,11 +3,28 @@ module.exports = Object.freeze({
         {
             "id": "react",
             "commands": [
-                "react -v",
-                "npm create-react-app my-app" //to create react app
+                "node -v",
+                "npm -v",
+                `npx create-react-app {name}` //to create react app
             ],
             "requirements": [
-                "nodejs"
+                "node",
+                "npm"
+            ],
+            "options": [
+                {
+                    "name": "name",
+                    "alias": "n",
+                    "context": "Name of the react app",
+                    "required": false,
+                    "booleanOpt": false
+                },
+                {
+                    "name": "test",
+                    "alias": "t",
+                    "required": false,
+                    "booleanOpt": true
+                }
             ],
             "details": "Command is used to check the version of React installed in your system",
             "website": "https://react.org",
