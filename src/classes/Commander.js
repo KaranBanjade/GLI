@@ -6,6 +6,10 @@ class Commander {
         commands.forEach(command => {
             let prg = program.command(command.name);
 
+            if (command.action) {
+                prg.action(command.action);
+            }
+
             if (command.subcommands) {
                 command.subcommands.forEach(scmd => {
                     let sub = prg.command(scmd.name);
