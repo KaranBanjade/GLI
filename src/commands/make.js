@@ -1,9 +1,23 @@
-const { Make } = require("../core/maker");
+const { boilerplates } = require("../meta/boilerplate");
+const execFunctions = require("../core/meta");
+const print = require("../utils/print");
+
 module.exports = {
     name: "make",
     option: ["help", "Makes the specified boilerplate"],
-    argument: [['<entity_name>', 'name of the boilerplate to make']],
-    action: function (entity_name) {
-        Make(entity_name);
+    subcommands: function () {
+        let commands = [];
+        boilerplates.forEach(bp => {
+            commands.push({
+                name: bp.id,
+                options: bp.options,
+                action: function (options) {
+                    execFunctions(options, bp.id);
+                }
+            });
+        });
+        return commands;
+    }(),
+    action: function () {
     }
 }

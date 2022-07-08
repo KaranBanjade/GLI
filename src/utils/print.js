@@ -1,4 +1,7 @@
 const colors = require('colors');
 module.exports = function (msg, color) {
-    console.log(colors[color](msg));
+    if (color && colors[color]) {
+        msg = colors[color](msg);
+    }
+    console.log(msg);
 }
