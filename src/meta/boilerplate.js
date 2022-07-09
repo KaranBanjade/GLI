@@ -1,23 +1,37 @@
 module.exports = Object.freeze({
+    requirements: {
+        "node" : "node -v",
+        "npm" : "npm -v",
+        "go": "go version",
+        "ng" : 'ng version',
+        "cargo" : "cargo --version"
+    },
     boilerplates: [
         {
-            "id": "javascipt|react",
+            "id": "react",
             "commands": [
-                "react -v",
-                "npm create-react-app my-app" //to create react app
+                `npx create-react-app {name}` //to create react app
             ],
             "requirements": [
-                "nodejs"
+                "node",
+                "npm"
+            ],
+            "options": [
+                {
+                    "name": "name",
+                    "alias": "n",
+                    "context": "Name of the react app",
+                    "required": true,
+                    "booleanOpt": false
+                }
             ],
             "details": "Command is used to check the version of React installed in your system",
             "website": "https://react.org",
             "docs": "https://reactjs.org/docs/getting-started.html"
-        }
-        ,
+        },
         {
-            "id": "javascipt|vue",
+            "id": "vue",
             "commands": [
-                "npm v vue",
                 "npm init vue@3" // to start a new vue app
             ],
             "requirements": [
@@ -26,29 +40,40 @@ module.exports = Object.freeze({
             "details": "Command is used to check the version of vue installed in your system",
             "website": "https://vuejs.org",
             "docs": "https://vuejs.org/guide/introduction.html"
-        }
-        ,
+        },
         {
-            "id": "javascipt|angular",
+            "id": "angular",
             "commands": [
-                "ng version",
-                "ng v",
-                "ng new myNewApp" //to start a new angluar app
+                "ng new {name}" //to start a new angluar app
             ],
             "requirements": [
-                "nodejs",
+                "node",
                 "ng"
             ],
             "details": "Command is used to check the version of angluar installed in your system",
             "website": "https://angular.io/",
             "docs": "https://angular.io/docs"
-        }
-        ,
+        },
         {
             "id": "go",
             "commands": [
                 "go version",
                 "go mod init"
+            ],
+            "options": [
+                {
+                    "name": "name",
+                    "alias": "n",
+                    "context": "Name of the go module",
+                    "required": true,
+                    "booleanOpt": false
+                },
+                {
+                    "name": "test",
+                    "alias": "t",
+                    "required": false,
+                    "booleanOpt": true
+                }
             ],
             "requirements": [
                 "go"
@@ -60,7 +85,6 @@ module.exports = Object.freeze({
         {
             "id": "rust",
             "commands": [
-                "cargo --version",
                 "cargo new"
             ],
             "requirements": [
@@ -70,18 +94,6 @@ module.exports = Object.freeze({
             "details": "Command is used to check the version of Golang install in your system",
             "website": "https://www.rust-lang.org/",
             "docs": "https://doc.rust-lang.org/cargo/index.html"
-        },
-        {
-            "id": "git",
-            "commands": [
-                "git --version"
-            ],
-            "requirements": [
-                "git"
-            ],
-            "details": "Command is used to check the version of Git install in your system",
-            "website": "https://git-scm.com",
-            "docs": "https://git-scm.com/doc/"
         }
     ]
 });
