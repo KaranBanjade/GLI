@@ -1,7 +1,6 @@
 const boilerplates = require("../meta/boilerplate").boilerplates;
 const osCheck = require("../helpers/os-visit");
 const print = require("../utils/print");
-const output = null;
 const CLIDocsLink = "https://google.com";
 module.exports = {
     name: "visit",
