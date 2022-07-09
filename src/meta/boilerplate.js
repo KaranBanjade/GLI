@@ -18,12 +18,6 @@ module.exports = Object.freeze({
                     "context": "Name of the react app",
                     "required": false,
                     "booleanOpt": false
-                },
-                {
-                    "name": "test",
-                    "alias": "t",
-                    "required": false,
-                    "booleanOpt": true
                 }
             ],
             "details": "Command is used to check the version of React installed in your system",
