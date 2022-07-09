@@ -1,10 +1,11 @@
 module.exports = Object.freeze({
     requirements: {
-        "node" : "node -v",
-        "npm" : "npm -v",
+        "node": "node -v",
+        "npm": "npm -v",
         "go": "go version",
-        "ng" : 'ng version',
-        "cargo" : "cargo --version"
+        "ng": 'ng version',
+        "cargo": "cargo --version",
+        "python": "python -V"
     },
     boilerplates: [
         {
@@ -57,8 +58,7 @@ module.exports = Object.freeze({
         {
             "id": "go",
             "commands": [
-                "go version",
-                "go mod init"
+                "go mod init {name}"
             ],
             "options": [
                 {
@@ -88,7 +88,6 @@ module.exports = Object.freeze({
                 "cargo new"
             ],
             "requirements": [
-                "rust",
                 "cargo"
             ],
             "details": "Command is used to check the version of Golang install in your system",

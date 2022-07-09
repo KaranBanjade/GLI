@@ -13,20 +13,20 @@ module.exports = {
         else if (options.d === true) {
             const boilerplate = boilerplates.find(boilerplate => boilerplate.id === str);
             if (boilerplate) {
-                print(`Opening ${boilerplate.id} docs`,"green");
+                print(`Opening ${boilerplate.id} docs`, "green");
                 osCheck(boilerplate.docs);
             }
             else
-                print("No such framework","red");
+                print("No such framework", "red");
         }
         else {
             const boilerplate = boilerplates.find(boilerplate => boilerplate.id === str);
             if (boilerplate) {
-                print(`Opening ${boilerplate.id} website`,"green");
+                print(`Opening ${boilerplate.id} website`, "green");
                 osCheck(boilerplate.website);
             }
             else
-                print("No such framework","red");
+                print("No such framework", "red");
         }
     }
 }

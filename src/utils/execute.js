@@ -1,21 +1,15 @@
-const print = require("../utils/print")
-const { exec } = require("child_process");
-
-const execute = (cmd) => {
-    const process = exec(cmd)
-
-    process.stdout.on('data', (data) => {
-        print(cmd + ":  " +data.toString(),'green')
-    })
-
-    process.stderr.on('data', (data) => {
-        print(data.toString(),"red")
-    })
-
-    process.on('exit', (code) => {
-        if(code != 0)
-            print('child process exited with code ' + code.toString(), 'blue')
-    })
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
+const print = require("../utils/print");
+const execute = async (cmd) => {
+    try {
+        await exec(cmd);
+        return true;
+    } catch (e) {
+        // log the stderr output
+        print(e.stderr, "red");
+        return false;
+    }
 }
 
 module.exports = execute;
