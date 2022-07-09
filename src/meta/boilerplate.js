@@ -1,13 +1,29 @@
 module.exports = Object.freeze({
+    requirements: {
+        "node" : "node -v",
+        "npm" : "npm -v",
+        "go": "go version",
+        "ng" : 'ng version',
+        "cargo" : "cargo --version"
+    },
     boilerplates: [
         {
             "id": "react",
             "commands": [
-                "react -v",
-                "npm create-react-app my-app" //to create react app
+                `npx create-react-app {name}` //to create react app
             ],
             "requirements": [
-                "nodejs"
+                "node",
+                "npm"
+            ],
+            "options": [
+                {
+                    "name": "name",
+                    "alias": "n",
+                    "context": "Name of the react app",
+                    "required": true,
+                    "booleanOpt": false
+                }
             ],
             "details": "Command is used to check the version of React installed in your system",
             "website": "https://react.org",
@@ -16,7 +32,6 @@ module.exports = Object.freeze({
         {
             "id": "vue",
             "commands": [
-                "npm v vue",
                 "npm init vue@3" // to start a new vue app
             ],
             "requirements": [
@@ -29,12 +44,10 @@ module.exports = Object.freeze({
         {
             "id": "angular",
             "commands": [
-                "ng version",
-                "ng v",
-                "ng new myNewApp" //to start a new angluar app
+                "ng new {name}" //to start a new angluar app
             ],
             "requirements": [
-                "nodejs",
+                "node",
                 "ng"
             ],
             "details": "Command is used to check the version of angluar installed in your system",
@@ -72,7 +85,6 @@ module.exports = Object.freeze({
         {
             "id": "rust",
             "commands": [
-                "cargo --version",
                 "cargo new"
             ],
             "requirements": [
