@@ -14,7 +14,10 @@ const execute = async (cmd, loaderText) => {
         if (spinner) spinner.success()
         return true;
     } catch (e) {
+        
         if(spinner) spinner.error();
+        // log the stderr output
+        print("\n" + e.stderr, "red");
         return false;
     }
 }
