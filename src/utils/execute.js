@@ -1,21 +1,25 @@
-const print = require("../utils/print")
-const { exec } = require("child_process");
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
+const print = require("../utils/print");
+const { createSpinner } = require('nanospinner');
 
-const execute = (cmd) => {
-    const process = exec(cmd)
-
-    process.stdout.on('data', (data) => {
-        print(cmd + ":  " +data.toString(),'green')
-    })
-
-    process.stderr.on('data', (data) => {
-        print(data.toString(),"red")
-    })
-
-    process.on('exit', (code) => {
-        if(code != 0)
-            print('child process exited with code ' + code.toString(), 'blue')
-    })
+const execute = async (cmd, loaderText) => {
+    let spinner = null;
+    try {
+        
+        if (loaderText) {
+            spinner = createSpinner(loaderText).start()
+        }
+        await exec(cmd);
+        if (spinner) spinner.success()
+        return true;
+    } catch (e) {
+        
+        if(spinner) spinner.error();
+        // log the stderr output
+        print("\n" + e.stderr, "red");
+        return false;
+    }
 }
 
 module.exports = execute;
