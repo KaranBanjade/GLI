@@ -12,6 +12,6 @@ const osCheck = (link) => {
     }
     const command = osObj.commands.LINK + " " + link;
     print(command, "yellow");
-    execute(command);
+    execute(command, null);
 }
 module.exports = osCheck;

@@ -13,7 +13,7 @@ module.exports = async function (meta, id) {
                 }
             })
             cmd = cmd.replaceAll(/{.*}/g, '');
-            execute(cmd);
+            execute(cmd, `Initializing ${bp.id}`);
             return;
         })
     }
@@ -26,7 +26,7 @@ const checkRequirements = async (commandRequirements, coreRequirements) => {
     for (index = 0; index < commandRequirements.length; index++) {
         try {
             let req = commandRequirements[index];
-            let cmdSuccess = await execute(coreRequirements[req]);
+            let cmdSuccess = await execute(coreRequirements[req], `Checking for ${req}`);
             if (!cmdSuccess) return cmdSuccess;
         } catch (err) {
             return false;

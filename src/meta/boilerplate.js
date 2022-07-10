@@ -27,7 +27,7 @@ module.exports = Object.freeze({
                 }
             ],
             "details": "Command is used to check the version of React installed in your system",
-            "website": "https://react.org",
+            "website": "https://reactjs.org",
             "docs": "https://reactjs.org/docs/getting-started.html"
         },
         {
