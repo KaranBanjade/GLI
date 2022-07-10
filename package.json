@@ -1,22 +1,28 @@
 {
-  "name": "gli",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "k01",
+  "version": "0.0.0-semantic-release",
+  "description": "nothing to description",
+  "keywords": [
+    "cli"
+  ],
+  "author": "KaranBanjade|OmGupta",
+  "license": "MIT",
   "dependencies": {
-    "chalk": "^5.0.1",
     "child_process": "^1.0.2",
     "cli-table": "^0.3.11",
     "colors": "^1.4.0",
     "commander": "^9.3.0",
-    "eslint": "^8.18.0",
-    "figlet": "^1.5.2",
-    "inquirer": "^9.0.0",
     "nanospinner": "^1.1.0"
   },
+  "scripts": {
+    "prepare": "husky install"
+  },
   "bin": {
-    "gli": "./src/index.js"
+    "k01": "./src/index.js"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "husky": "^8.0.1"
   }
 }
