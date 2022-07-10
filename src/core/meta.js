@@ -6,16 +6,21 @@ module.exports = async function (meta, id) {
     let bp = boilerplates.find(bp => bp.id == id);
     let isReqMet = await checkRequirements(bp.requirements, requirements);
     if (isReqMet) {
-        bp.commands.forEach(cmd => {
+        let init = true;
+        // bp.commands.forEach(cmd => {
+        for (index = 0; index < bp.commands.length; index++) {
+            let cmd = bp.commands[index];
             Object.keys(meta).forEach(key => {
                 if (cmd.includes(`{${key}}`) && meta[key]) {
                     cmd = cmd.replace(`{${key}}`, meta[key]);
                 }
             })
             cmd = cmd.replaceAll(/{.*}/g, '');
-            execute(cmd, `Initializing ${bp.id}`);
-            return;
-        })
+            let cmdSuccess = await execute(cmd, `Initializing ${bp.id}`);
+            init = init && cmdSuccess;
+            // return;
+        };
+        if(init) print(`Initialized ${bp.id}`, "green");
     }
     else {
         print("Requirements not met", "red");
