@@ -7,7 +7,6 @@ module.exports = async function (meta, id) {
     let isReqMet = await checkRequirements(bp.requirements, requirements);
     if (isReqMet) {
         let init = true;
-        // bp.commands.forEach(cmd => {
         for (index = 0; index < bp.commands.length; index++) {
             let cmd = bp.commands[index];
             Object.keys(meta).forEach(key => {
@@ -18,7 +17,6 @@ module.exports = async function (meta, id) {
             cmd = cmd.replaceAll(/{.*}/g, '');
             let cmdSuccess = await execute(cmd, `Initializing ${bp.id}`);
             init = init && cmdSuccess;
-            // return;
         };
         if(init) print(`Initialized ${bp.id}`, "green");
     }
