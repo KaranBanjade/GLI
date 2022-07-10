@@ -4,8 +4,9 @@ const print = require("../utils/print");
 const { createSpinner } = require('nanospinner');
 
 const execute = async (cmd, loaderText) => {
+    let spinner = null;
     try {
-        let spinner = null;
+        
         if (loaderText) {
             spinner = createSpinner(loaderText).start()
         }
@@ -13,8 +14,7 @@ const execute = async (cmd, loaderText) => {
         if (spinner) spinner.success()
         return true;
     } catch (e) {
-        // log the stderr output
-        print(e.stderr, "red");
+        if(spinner) spinner.error();
         return false;
     }
 }
