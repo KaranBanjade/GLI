@@ -33,10 +33,10 @@ module.exports = Object.freeze({
         {
             "id": "vue",
             "commands": [
-                "npm init vue@3" // to start a new vue app
+                "npm init vue@latest" // to start a new vue app
             ],
             "requirements": [
-                "nodejs"
+                "node"
             ],
             "details": "Command is used to check the version of vue installed in your system",
             "website": "https://vuejs.org",
