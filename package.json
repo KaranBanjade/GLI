@@ -1,19 +1,15 @@
 {
-  "name": "gli",
-  "version": "2.0.0",
-  "description": "",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "@banjade/gli",
+  "version": "1.0.0",
+  "description": "CLI for boilerplates",
+  "keywords": ["cli"],
+  "author": "banjade",
+  "license": "MIT",
   "dependencies": {
-    "chalk": "^5.0.1",
     "child_process": "^1.0.2",
     "cli-table": "^0.3.11",
     "colors": "^1.4.0",
     "commander": "^9.3.0",
-    "eslint": "^8.18.0",
-    "figlet": "^1.5.2",
-    "inquirer": "^9.0.0",
     "nanospinner": "^1.1.0"
   },
   "bin": {
