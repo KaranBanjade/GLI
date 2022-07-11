@@ -51,6 +51,15 @@ module.exports = Object.freeze({
                 "node",
                 "ng"
             ],
+            "options": [
+                {
+                    "name": "name",
+                    "alias": "n",
+                    "context": "Name of the react app",
+                    "required": true,
+                    "booleanOpt": false
+                }
+            ],
             "details": "Command is used to check the version of angluar installed in your system",
             "website": "https://angular.io/",
             "docs": "https://angular.io/docs"
