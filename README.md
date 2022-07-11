@@ -39,17 +39,10 @@
 ### Commands
 - ```gli -h``` or ```gli --help``` commands present the help menu for gli.
 
-    > ``` 
-    $ gli help
-    Usage: index [options] [command]
-    Options:
-    -h, --help                display help for command
-    Commands:
-      list [options]
-      make [options]
-      visit [options] [string]
-      help [command]            display help for command
-    ```
+    >   ![image](https://user-images.githubusercontent.com/40836009/178242562-15c402e7-badb-423e-8e55-dcbe914d9687.png)
+
+
+
 - ```gli list``` commnad prints the table of frameworks supported by gli alongwith their requirements and the official websites of the framworks.
     >``` 
     $ gli list
