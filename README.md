@@ -44,50 +44,20 @@
 
 
 - ```gli list``` commnad prints the table of frameworks supported by gli alongwith their requirements and the official websites of the framworks.
-    >``` 
-    $ gli list
-┌─────────┬─────────────────────────────┬──────────────┬────────────────────────────┐
-│ Id      │ Commands                    │ Requirements │ Website                    │
-├─────────┼─────────────────────────────┼──────────────┼────────────────────────────┤
-│ react   │ npx create-react-app {name} │ node, npm    │ https://react.org          │
-├─────────┼─────────────────────────────┼──────────────┼────────────────────────────┤
-│ vue     │ npm init vue@3              │ nodejs       │ https://vuejs.org          │
-├─────────┼─────────────────────────────┼──────────────┼────────────────────────────┤
-│ angular │ ng new {name}               │ node, ng     │ https://angular.io/        │
-├─────────┼─────────────────────────────┼──────────────┼────────────────────────────┤
-│ go      │ go version, go mod init     │ go           │ https://golang.org         │
-├─────────┼─────────────────────────────┼──────────────┼────────────────────────────┤
-│ rust    │ cargo new                   │ rust, cargo  │ https://www.rust-lang.org/ │
-    ```
+    >![image](https://user-images.githubusercontent.com/40836009/178242791-551456a7-1061-4019-97b6-6008fd871af8.png)
+
 - ```gli visit ``` command is used to visit the docs or the official website of the frameworks provided.  
 To visit docs of the language flag ```-d``` is used.
     - ```gli visit [framework name]```
-    > ``` 
-    $ gli visit go
-    Opening go website
-    explorer https://golang.org
-        ```
+        > ![image](https://user-images.githubusercontent.com/40836009/178242841-1e5ea08a-efb8-420e-b578-8f9130b39790.png)
+
     - ```gli visit -d [framwork name]```
-    >```
-    Opening go docs
-    explorer https://golang.org/doc/
-    ```
+        >   ![image](https://user-images.githubusercontent.com/40836009/178242891-06997cd0-94dc-42a0-9dfc-cb7ca2854c40.png)
+
 - ``` gli make``` command is used to generate the boilerplate of the desired framwork. Further subcommands are used to specify the actual requirement.
+    > ![image](https://user-images.githubusercontent.com/40836009/178242960-5316a3ff-f1d8-4560-971b-5d9f114f9af1.png)
+
     - ```gli make <framework name> [options] ```
-        >``` 
-        gli make
-        Usage: index make [options] [command]
-        Options:
-          h                e
-          M                a
-          -h, --help       display help for command
-        Commands:
-          react [options]
-          vue
-          angular
-          go [options]
-          rust
-          help [command]   display help for command
-        ```
+        > 
 
 
