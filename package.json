@@ -1,8 +1,10 @@
 {
   "name": "@banjade/gli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for boilerplates",
-  "keywords": ["cli"],
+  "keywords": [
+    "cli"
+  ],
   "author": "banjade",
   "license": "MIT",
   "dependencies": {
