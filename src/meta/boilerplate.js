@@ -5,7 +5,6 @@ module.exports = Object.freeze({
         "go": "go version",
         "ng": 'ng version',
         "cargo": "cargo --version",
-        "python": "python -V"
     },
     boilerplates: [
         {
@@ -29,18 +28,6 @@ module.exports = Object.freeze({
             "details": "Command is used to check the version of React installed in your system",
             "website": "https://reactjs.org",
             "docs": "https://reactjs.org/docs/getting-started.html"
-        },
-        {
-            "id": "vue",
-            "commands": [
-                "npm init vue@latest" // to start a new vue app
-            ],
-            "requirements": [
-                "node"
-            ],
-            "details": "Command is used to check the version of vue installed in your system",
-            "website": "https://vuejs.org",
-            "docs": "https://vuejs.org/guide/introduction.html"
         },
         {
             "id": "angular",
