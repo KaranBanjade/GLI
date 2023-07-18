@@ -57,7 +57,6 @@ const checkRequirements = async (commandRequirements, coreRequirements) => {
             await new Promise(resolve => {
                 rl.question(`Do you want to install ${req}? (y/n) `, async (resp) => {
                     if (resp.toLowerCase() === 'y') {
-                        print(`Installing ${req}`, "yellow");
                         // install requirement
                         cmdSuccess = await requirementsInstaller([req]);
                     }
@@ -88,6 +87,7 @@ const requirementsInstaller = async (requirements) => {
                 return true;
             }
         } catch (err) {
+            print(`Failed to install ${req}`, "red");
             return false;
         }
     };
