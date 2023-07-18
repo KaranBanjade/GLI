@@ -4,12 +4,12 @@ module.exports = Object.freeze({
             id: "Darwin",
             os: "MacOS",
             commands: { LINK: "open" },
-            installers: {
-                "node": `curl -fsSL https://webinstall.dev/node@stable | bash`,
+          installers: {
+                "node" : `curl -fsSL https://webinstall.dev/node@stable | bash`,
                 "npm" : `npm install -g npm | bash`,
                 "ng" : `npm install -g @angular/cli | bash`,
-                "go": `curl -fsSL https://webinstall.dev/golang@1.14 | bash`,
-                "cargo": `curl https://sh.rustup.rs -sSf | sh`,
+                "go" : `curl -fsSL https://webinstall.dev/golang@1.14 | bash`,
+                "cargo" : `curl https://sh.rustup.rs -sSf | sh`,
             }
         },
         {
