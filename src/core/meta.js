@@ -29,7 +29,6 @@ module.exports = async function (meta, id) {
 
 const checkRequirements = async (commandRequirements, coreRequirements) => {
     const OS =  osMap.find(OS => OS.id == os.type());
-    console.log(OS);
     for (index = 0; index < commandRequirements.length; index++) {
         try {
             let req = commandRequirements[index];
