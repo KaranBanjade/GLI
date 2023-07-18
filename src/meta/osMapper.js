@@ -17,7 +17,7 @@ module.exports = Object.freeze({
             os: "Linux",
             commands: { LINK: "xdg-open" },
             installers: {
-                "Node" : `curl -fsSL https://webinstall.dev/node@stable | bash`,
+                "node" : `curl -fsSL https://webinstall.dev/node@stable | bash`,
                 "npm" : `npm install -g npm | bash`,
                 "ng" : `npm install -g @angular/cli | bash`,
                 "go" : `curl -fsSL https://webinstall.dev/golang@1.14 | bash`,
@@ -29,7 +29,7 @@ module.exports = Object.freeze({
             os: "Windows",
             commands: { LINK: "explorer" },
             installers: {
-                "Node" : `curl.exe -fsSA "MS" https://webinstall.dev/node@stable | powershell`,
+                "node" : `curl.exe -fsSA "MS" https://webinstall.dev/node@stable | powershell`,
                 "npm" : `npm install -g npm`,
                 "ng" : `npm install -g @angular/cli`,
                 "go" : `curl.exe -fsSA "MS" https://webinstall.dev/golang@1.14 | powershell`,
