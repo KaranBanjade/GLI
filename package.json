@@ -12,8 +12,7 @@
     "cli-table": "^0.3.11",
     "colors": "^1.4.0",
     "commander": "^9.3.0",
-    "nanospinner": "^1.1.0",
-    "os": "^0.1.2"
+    "nanospinner": "^1.1.0"
   },
   "bin": {
     "gli": "./src/index.js"
