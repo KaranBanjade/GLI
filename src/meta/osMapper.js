@@ -21,7 +21,7 @@ module.exports = Object.freeze({
                 "npm" : `npm install -g npm | bash`,
                 "ng" : `npm install -g @angular/cli | bash`,
                 "go" : `curl -fsSL https://webinstall.dev/golang@1.14 | bash`,
-                "cargo" : `curl https://sh.rustup.rs -sSf | sh`,
+                "cargo" : `curl https://sh.rustup.rs -sSf | sh`
             }
         },
         {
