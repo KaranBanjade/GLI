@@ -13,7 +13,7 @@ module.exports = Object.freeze({
         {
             id: "Windows_NT",
             os: "Windows",
-            commands: { LINK: "explorer" },
+            commands: { LINK: "explorer" }
         }
     ]
 });
