@@ -28,13 +28,6 @@ module.exports = Object.freeze({
             id: "Windows_NT",
             os: "Windows",
             commands: { LINK: "explorer" },
-            installers: {
-                "Node" : `curl.exe -fsSA "MS" https://webinstall.dev/node@stable | powershell`,
-                "npm" : `npm install -g npm`,
-                "ng" : `npm install -g @angular/cli`,
-                "go" : `curl.exe -fsSA "MS" https://webinstall.dev/golang@1.14 | powershell`,
-                "cargo": `curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | powershell`,
-            }
         }
     ]
 });
