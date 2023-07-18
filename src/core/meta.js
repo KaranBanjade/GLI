@@ -16,6 +16,9 @@ module.exports = async function (meta, id) {
             })
             cmd = cmd.replaceAll(/{.*}/g, '');
             let cmdSuccess = await execute(cmd, `Initializing ${bp.id}`);
+            if (!cmdSuccess) {
+                return;
+            }
             init = init && cmdSuccess;
         };
         if(init) print(`Initialized ${bp.id}`, "green");

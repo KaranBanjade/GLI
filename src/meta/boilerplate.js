@@ -54,6 +54,7 @@ module.exports = Object.freeze({
         {
             "id": "go",
             "commands": [
+                "mkdir {name}",
                 "go mod init {name}"
             ],
             "options": [
@@ -64,12 +65,6 @@ module.exports = Object.freeze({
                     "required": true,
                     "booleanOpt": false
                 },
-                {
-                    "name": "test",
-                    "alias": "t",
-                    "required": false,
-                    "booleanOpt": true
-                }
             ],
             "requirements": [
                 "go"
