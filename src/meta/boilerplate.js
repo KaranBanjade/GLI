@@ -42,7 +42,7 @@ module.exports = Object.freeze({
                 {
                     "name": "name",
                     "alias": "n",
-                    "context": "Name of the react app",
+                    "context": "Name of the angular app",
                     "required": true,
                     "booleanOpt": false
                 }
@@ -64,12 +64,6 @@ module.exports = Object.freeze({
                     "required": true,
                     "booleanOpt": false
                 },
-                {
-                    "name": "test",
-                    "alias": "t",
-                    "required": false,
-                    "booleanOpt": true
-                }
             ],
             "requirements": [
                 "go"
@@ -81,7 +75,16 @@ module.exports = Object.freeze({
         {
             "id": "rust",
             "commands": [
-                "cargo new"
+                "cargo new {name}"
+            ],
+            "options": [
+                {
+                    "name": "name",
+                    "alias": "n",
+                    "context": "Name of the cargo module",
+                    "required": true,
+                    "booleanOpt": false
+                },
             ],
             "requirements": [
                 "cargo"
