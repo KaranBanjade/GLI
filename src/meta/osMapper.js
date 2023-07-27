@@ -6,8 +6,8 @@ module.exports = Object.freeze({
             commands: { LINK: "open" },
           installers: {
                 "node" : `curl -fsSL https://webinstall.dev/node@stable | bash`,
-                "npm" : `npm install -g npm | bash`,
-                "ng" : `npm install -g @angular/cli | bash`,
+                "npm" : `npm install -g npm`,
+                "ng" : `npm install -g @angular/cli`,
                 "go" : `curl -fsSL https://webinstall.dev/golang@1.14 | bash`,
                 "cargo" : `curl https://sh.rustup.rs -sSf | sh`,
             }
@@ -18,8 +18,8 @@ module.exports = Object.freeze({
             commands: { LINK: "xdg-open" },
             installers: {
                 "node" : `curl -fsSL https://webinstall.dev/node@stable | bash`,
-                "npm" : `npm install -g npm | bash`,
-                "ng" : `npm install -g @angular/cli | bash`,
+                "npm" : `npm install -g npm`,
+                "ng" : `npm install -g @angular/cli`,
                 "go" : `curl -fsSL https://webinstall.dev/golang@1.14 | bash`,
                 "cargo" : `curl https://sh.rustup.rs -sSf | sh`,
             }
